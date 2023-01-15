@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* RESET, ROOT AND GENERAL STYLES*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-dark: #1d1f1d;
+  --color-light: #f6f4fa;
+  --color-red: #f96666;
+}
+
+html,
+body {
+  background-color: var(--color-light);
+  font-family: "Pacifico", cursive;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  opacity: 0.85;
+}
+
+li:hover {
+  opacity: 1;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1em;
+  outline: none;
+  padding: 1rem 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* UTILITY CLASSES */
+.flex-row {
+  align-items: center;
+  display: flex;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 699px) {
+  .header {
+    position: relative;
+  }
+
+  .header--nav {
+    padding: 1rem !important;
+  }
+
+  .nav--menu {
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+    right: -100%;
+    top: 10%;
+    width: 100%;
+    z-index: 999;
+    transition: all ease 0.4s;
+  }
+
+  .nav--menu.is-active {
+    right: 0;
+  }
+
+  .menu--item {
+    display: block;
+    padding: 1rem;
+  }
+
+  .nav--container {
+    gap: 1rem !important;
+  }
+
+  .nav--menu-mobile {
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+  }
+}
+
+/* NAVBAR TRANSITIONS */
+.nav--menu-mobile:hover .bar {
+  background-color: var(--color-red);
+}
+
+.nav--menu-mobile.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav--menu-mobile.is-active .bar:nth-child(1) {
+  background-color: var(--color-red);
+  transform: translate(0, 8px) rotate(-45deg);
+}
+.nav--menu-mobile.is-active .bar:nth-child(3) {
+  background-color: var(--color-red);
+  transform: translate(0, -8px) rotate(45deg);
+}
