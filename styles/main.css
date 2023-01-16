@@ -127,6 +127,14 @@ button {
   .menu--container {
     padding: 1rem 0.5rem !important;
   }
+
+  .about--container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer--container {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 /* NAVBAR TRANSITIONS */

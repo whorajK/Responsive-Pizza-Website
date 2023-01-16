@@ -10,7 +10,7 @@
 
 .header--nav {
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .nav--logo,
@@ -50,6 +50,10 @@
 }
 
 /* MAIN SECTION */
+.main {
+  margin: 2rem auto;
+}
+
 .main--hero {
   color: var(--color-light);
   height: 90vh;
@@ -88,6 +92,32 @@
 .hero--text button {
   margin-left: -2rem;
   padding: 0.75rem 1rem;
+}
+
+.about {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.about h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 3rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about--container {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-gap: 1rem;
+}
+
+.about--container img {
+  object-fit: cover;
 }
 
 .menu {
@@ -131,9 +161,23 @@
 }
 
 .footer--container {
-  padding: 1rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem 1rem;
 }
 
 .footer--h3 {
   font-size: 0.85rem;
+}
+
+.footer--p {
+  font-size: 1rem;
+}
+
+.footer--links {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
 }
