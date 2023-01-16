@@ -12,7 +12,8 @@
 :root {
   --color-dark: #1d1f1d;
   --color-light: #f6f4fa;
-  --color-red: #f96666;
+  --color-red: #fe3b3b;
+  --color-fade: #faebeb;
 }
 
 html,
@@ -38,21 +39,39 @@ li:hover {
   opacity: 1;
 }
 
+form {
+  align-items: center;
+  display: flex;
+}
+
+input,
 button {
-  background: none;
-  border: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.1em;
+  font-weight: bold;
+  outline: none;
+}
+
+input {
+  padding: 0.75rem 1rem;
+}
+
+button {
+  background: var(--color-red);
+  border: 2px solid var(--color-red);
   color: inherit;
   cursor: pointer;
-  font-size: 1.1em;
-  outline: none;
   padding: 1rem 2rem;
-  transition: all 0.2s ease-in-out;
 }
 
 /* UTILITY CLASSES */
 .flex-row {
   align-items: center;
   display: flex;
+}
+
+.blur {
+  filter: blur(2px);
 }
 
 /* MEDIA QUERIES */
@@ -95,6 +114,18 @@ button {
     display: flex;
     flex-direction: column;
     transition: all ease-in-out 0.5s;
+  }
+
+  .hero--text {
+    padding: 0 1rem;
+  }
+
+  .hero--text input {
+    font-size: 1rem;
+  }
+
+  .menu--container {
+    padding: 1rem 0.5rem !important;
   }
 }
 
